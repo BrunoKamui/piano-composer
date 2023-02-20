@@ -49,3 +49,28 @@ main {
   width: 10rem;
   height: 50rem;
 }
+
+.black-keys {
+  display: flex;
+  gap: 5rem;
+  position: relative;
+  top: -50rem;
+  right: -7.4rem;
+  max-width: fit-content;
+}
+
+.black {
+  display: flex;
+  background-color: var(--dark-gray);
+  width: 5rem;
+  height: 31.5rem;
+  box-shadow: 15px 5px 10px var(--light-gray);
+  border: 7px solid var(--black);
+  outline: 3px solid var(--gray);
+  border-top: 0;
+}
+
+.black:nth-child(2),
+.black:nth-child(5) {
+  margin-right: 10rem;
+}
