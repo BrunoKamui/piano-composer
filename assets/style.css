@@ -74,3 +74,15 @@ main {
 .black:nth-child(5) {
   margin-right: 10rem;
 }
+
+.key-edge {
+  align-self: self-end;
+  background-color: var(--medium-gray);
+  width: 3.5rem;
+  height: 2.5rem;
+  transform: perspective(5px) rotateX(1deg);
+  margin: 2px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  outline: 3px solid var(--medium-gray);
+}
