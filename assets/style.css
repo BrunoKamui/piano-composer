@@ -11,19 +11,27 @@
   --gray: #555;
   --medium-gray: #222;
   --light-gray: #999;
+  --wood: #301a02;
   font-size: 62.5%;
 }
 
 body {
-  background-color: #333;
+  background-color: var(--black);
   font-size: 1.6rem;
+}
+
+header {
+  height: 15rem;
+  width: 100vw;
+  background-color: var(--medium-gray);
 }
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 30rem);
 }
 
 .piano {
@@ -85,4 +93,14 @@ main {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   outline: 3px solid var(--medium-gray);
+}
+
+.fade {
+  opacity: 0.5;
+}
+
+footer {
+  height: 15rem;
+  width: 100vw;
+  background-color: var(--medium-gray);
 }
