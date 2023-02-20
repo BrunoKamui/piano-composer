@@ -6,24 +6,25 @@
 
 :root {
   --white: #eee;
-  --black: #000;
-  --dark-gray: #111;
-  --gray: #555;
-  --medium-gray: #222;
   --light-gray: #999;
-  --wood: #301a02;
+  --gray: #555;
+  --header-footer: #333;
+  --edge-gray: #222;
+  --dark-gray: #111;
+  --black: #000;
   font-size: 62.5%;
 }
 
 body {
   background-color: var(--black);
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
 }
 
 header {
   height: 15rem;
   width: 100vw;
-  background-color: var(--medium-gray);
+  background-color: var(--header-footer);
 }
 
 main {
@@ -76,6 +77,12 @@ main {
 .key {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 2.3rem;
+  line-height: 8.5rem;
+  font-style: italic;
 }
 
 .white {
@@ -96,7 +103,6 @@ main {
 }
 
 .black {
-  display: flex;
   background-color: var(--dark-gray);
   width: 5rem;
   height: 31.5rem;
@@ -104,6 +110,7 @@ main {
   border: 7px solid var(--black);
   outline: 3px solid var(--gray);
   border-top: 0;
+  color: var(--white);
 }
 
 .black:nth-child(2),
@@ -113,18 +120,18 @@ main {
 
 .key-edge {
   align-self: self-end;
-  background-color: var(--medium-gray);
+  background-color: var(--edge-gray);
   width: 3.5rem;
   height: 2.5rem;
   transform: perspective(5px) rotateX(1deg);
   margin: 2px;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  outline: 3px solid var(--medium-gray);
+  outline: 3px solid var(--edge-gray);
 }
 
 footer {
   height: 15rem;
   width: 100vw;
-  background-color: var(--medium-gray);
+  background-color: var(--header-footer);
 }
