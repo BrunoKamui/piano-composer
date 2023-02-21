@@ -13,91 +13,100 @@
   <body>
     <header></header>
     <main>
-      <div class="not-playable left">
-        <div class="white-keys">
-          <div class="key white"></div>
-          <div class="key white"></div>
-          <div class="key white"></div>
-          <div class="key white"></div>
-          <div class="key white"></div>
-          <div class="key white"></div>
-          <div class="key white"></div>
-        </div>
-        <div class="black-keys">
-          <div class="key black"><div class="key-edge"></div></div>
-          <div class="key black"><div class="key-edge"></div></div>
-          <div class="key black"><div class="key-edge"></div></div>
-          <div class="key black"><div class="key-edge"></div></div>
-          <div class="key black"><div class="key-edge"></div></div>
-        </div>
-      </div>
-
-      <section class="piano">
-        <div class="white-keys">
-          <div class="key white" data-key="keyq">Q</div>
-          <div class="key white" data-key="keyw">W</div>
-          <div class="key white" data-key="keye">E</div>
-          <div class="key white" data-key="keyr">R</div>
-          <div class="key white" data-key="keyt">T</div>
-          <div class="key white" data-key="keyy">Y</div>
-          <div class="key white" data-key="keyu">U</div>
-          <div class="key white" data-key="keyi">I</div>
-          <div class="key white" data-key="keyo">O</div>
-          <div class="key white" data-key="keyp">P</div>
+      <section class="piano-area">
+        <div class="not-playable left">
+          <div class="white-keys">
+            <div class="key white"></div>
+            <div class="key white"></div>
+            <div class="key white"></div>
+            <div class="key white"></div>
+            <div class="key white"></div>
+            <div class="key white"></div>
+            <div class="key white"></div>
+          </div>
+          <div class="black-keys">
+            <div class="key black"><div class="key-edge"></div></div>
+            <div class="key black"><div class="key-edge"></div></div>
+            <div class="key black"><div class="key-edge"></div></div>
+            <div class="key black"><div class="key-edge"></div></div>
+            <div class="key black"><div class="key-edge"></div></div>
+          </div>
         </div>
 
-        <div class="black-keys">
-          <div class="key black" data-key="digit2">
-            2
-            <div class="key-edge"></div>
+        <div class="piano">
+          <div class="white-keys">
+            <div class="key white" data-key="keyq">Q</div>
+            <div class="key white" data-key="keyw">W</div>
+            <div class="key white" data-key="keye">E</div>
+            <div class="key white" data-key="keyr">R</div>
+            <div class="key white" data-key="keyt">T</div>
+            <div class="key white" data-key="keyy">Y</div>
+            <div class="key white" data-key="keyu">U</div>
+            <div class="key white" data-key="keyi">I</div>
+            <div class="key white" data-key="keyo">O</div>
+            <div class="key white" data-key="keyp">P</div>
           </div>
-          <div class="key black" data-key="digit3">
-            3
-            <div class="key-edge"></div>
+
+          <div class="black-keys">
+            <div class="key black" data-key="digit2">
+              2
+              <div class="key-edge"></div>
+            </div>
+            <div class="key black" data-key="digit3">
+              3
+              <div class="key-edge"></div>
+            </div>
+            <div class="key black" data-key="digit5">
+              5
+              <div class="key-edge"></div>
+            </div>
+            <div class="key black" data-key="digit6">
+              6
+              <div class="key-edge"></div>
+            </div>
+            <div class="key black" data-key="digit7">
+              7
+              <div class="key-edge"></div>
+            </div>
+            <div class="key black" data-key="digit9">
+              9
+              <div class="key-edge"></div>
+            </div>
+            <div class="key black" data-key="digit0">
+              0
+              <div class="key-edge"></div>
+            </div>
           </div>
-          <div class="key black" data-key="digit5">
-            5
-            <div class="key-edge"></div>
+        </div>
+
+        <div class="not-playable right">
+          <div class="white-keys">
+            <div class="key white"></div>
+            <div class="key white"></div>
+            <div class="key white"></div>
+            <div class="key white"></div>
+            <div class="key white"></div>
+            <div class="key white"></div>
+            <div class="key white"></div>
           </div>
-          <div class="key black" data-key="digit6">
-            6
-            <div class="key-edge"></div>
-          </div>
-          <div class="key black" data-key="digit7">
-            7
-            <div class="key-edge"></div>
-          </div>
-          <div class="key black" data-key="digit9">
-            9
-            <div class="key-edge"></div>
-          </div>
-          <div class="key black" data-key="digit0">
-            0
-            <div class="key-edge"></div>
+          <div class="black-keys">
+            <div class="key black"><div class="key-edge"></div></div>
+            <div class="key black"><div class="key-edge"></div></div>
+            <div class="key black"><div class="key-edge"></div></div>
+            <div class="key black"><div class="key-edge"></div></div>
+            <div class="key black"><div class="key-edge"></div></div>
           </div>
         </div>
       </section>
 
-      <div class="not-playable right">
-        <div class="white-keys">
-          <div class="key white"></div>
-          <div class="key white"></div>
-          <div class="key white"></div>
-          <div class="key white"></div>
-          <div class="key white"></div>
-          <div class="key white"></div>
-          <div class="key white"></div>
+      <section class="composer-area">
+        <div class="composer">
+          <input id="song" type="text" />
+          <button>Play</button>
         </div>
-        <div class="black-keys">
-          <div class="key black"><div class="key-edge"></div></div>
-          <div class="key black"><div class="key-edge"></div></div>
-          <div class="key black"><div class="key-edge"></div></div>
-          <div class="key black"><div class="key-edge"></div></div>
-          <div class="key black"><div class="key-edge"></div></div>
-        </div>
-      </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>by Bruno Kamui</footer>
 
     <audio id="sound-keyq" src="./assets/sounds/keyq.wav"></audio>
     <audio id="sound-keyw" src="./assets/sounds/keyw.wav"></audio>

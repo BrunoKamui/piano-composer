@@ -20,6 +20,7 @@ body {
   background-color: var(--black);
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
+  overflow: hidden;
 }
 
 header {
@@ -28,7 +29,7 @@ header {
   background-color: var(--header-footer);
 }
 
-main {
+.piano-area {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,7 +98,7 @@ main {
 .white.active {
   border: 1px solid var(--gray);
   border-top: none;
-  padding-bottom: 2.1rem;
+  padding-bottom: 2rem;
 }
 
 .white.active.highlight {
@@ -126,12 +127,14 @@ main {
   outline: 3px solid var(--gray);
   border-top: 0;
   color: var(--white);
+  line-height: 8rem;
 }
 
 .black.active {
   border: 3px solid transparent;
   outline: 2px solid var(--gray);
   border-top: none;
+  line-height: 7.5rem;
 }
 
 .black.active.highlight {
@@ -153,6 +156,13 @@ main {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   outline: 3px solid var(--edge-gray);
+}
+
+.composer-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
 }
 
 footer {
