@@ -35,45 +35,45 @@
 
         <div class="piano">
           <div class="white-keys">
-            <div class="key white" data-key="keyq">Q</div>
-            <div class="key white" data-key="keyw">W</div>
-            <div class="key white" data-key="keye">E</div>
-            <div class="key white" data-key="keyr">R</div>
-            <div class="key white" data-key="keyt">T</div>
-            <div class="key white" data-key="keyy">Y</div>
-            <div class="key white" data-key="keyu">U</div>
-            <div class="key white" data-key="keyi">I</div>
-            <div class="key white" data-key="keyo">O</div>
-            <div class="key white" data-key="keyp">P</div>
+            <div class="key white" data-key="keyq"><p>Q</p></div>
+            <div class="key white" data-key="keyw"><p>W</p></div>
+            <div class="key white" data-key="keye"><p>E</p></div>
+            <div class="key white" data-key="keyr"><p>R</p></div>
+            <div class="key white" data-key="keyt"><p>T</p></div>
+            <div class="key white" data-key="keyy"><p>Y</p></div>
+            <div class="key white" data-key="keyu"><p>U</p></div>
+            <div class="key white" data-key="keyi"><p>I</p></div>
+            <div class="key white" data-key="keyo"><p>O</p></div>
+            <div class="key white" data-key="keyp"><p>P</p></div>
           </div>
 
           <div class="black-keys">
             <div class="key black" data-key="digit2">
-              2
+              <p>2</p>
               <div class="key-edge"></div>
             </div>
             <div class="key black" data-key="digit3">
-              3
+              <p>3</p>
               <div class="key-edge"></div>
             </div>
             <div class="key black" data-key="digit5">
-              5
+              <p>5</p>
               <div class="key-edge"></div>
             </div>
             <div class="key black" data-key="digit6">
-              6
+              <p>6</p>
               <div class="key-edge"></div>
             </div>
             <div class="key black" data-key="digit7">
-              7
+              <p>7</p>
               <div class="key-edge"></div>
             </div>
             <div class="key black" data-key="digit9">
-              9
+              <p>9</p>
               <div class="key-edge"></div>
             </div>
             <div class="key black" data-key="digit0">
-              0
+              <p>0</p>
               <div class="key-edge"></div>
             </div>
           </div>
@@ -99,10 +99,53 @@
         </div>
       </section>
 
-      <section class="composer-area">
+      <section class="interface">
+        <div class="options">
+          <label>
+            <input type="checkbox" />
+            <p>Highlight keys</p>
+          </label>
+          <label>
+            <input type="checkbox" />
+            <p>Display piano keys</p>
+          </label>
+          <label>
+            <input type="checkbox" />
+            <p>Display keyboard keys</p>
+          </label>
+          <label>
+            <input type="checkbox" />
+            <p>Display musical notes</p>
+          </label>
+        </div>
+
         <div class="composer">
+          <h3>Song Composer</h3>
           <input id="song" type="text" />
-          <button>Play</button>
+          <button class="play-button">Play</button>
+        </div>
+
+        <div class="samples">
+          <div class="sample">
+            <p>Music</p>
+            <button class="play-sample">Play Sample</button>
+          </div>
+          <div class="sample">
+            <p>Music</p>
+            <button class="play-sample">Play Sample</button>
+          </div>
+          <div class="sample">
+            <p>Music</p>
+            <button class="play-sample">Play Sample</button>
+          </div>
+          <div class="sample">
+            <p>Music</p>
+            <button class="play-sample">Play Sample</button>
+          </div>
+          <div class="sample">
+            <p>Music</p>
+            <button class="play-sample">Play Sample</button>
+          </div>
         </div>
       </section>
     </main>
