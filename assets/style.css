@@ -9,9 +9,10 @@
   --light-gray: #999;
   --gray: #555;
   --header-footer: #333;
-  --edge-gray: #222;
+  --edge-gray: #292929;
   --dark-gray: #111;
   --black: #000;
+  --highlight: #add8e6;
   font-size: 62.5%;
 }
 
@@ -70,10 +71,6 @@ main {
   min-width: 100rem;
 }
 
-.white-keys {
-  display: flex;
-}
-
 .key {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -84,6 +81,10 @@ main {
   font-style: italic;
 }
 
+.white-keys {
+  display: flex;
+}
+
 .white {
   border: 3px solid var(--gray);
   border-top: none;
@@ -91,6 +92,16 @@ main {
   width: 10rem;
   height: 50rem;
   padding-bottom: 2.5rem;
+}
+
+.white.active {
+  border: 1px solid var(--gray);
+  border-top: none;
+  padding-bottom: 2.1rem;
+}
+
+.white.active.highlight {
+  background-color: var(--highlight);
 }
 
 .black-keys {
@@ -117,6 +128,17 @@ main {
   color: var(--white);
 }
 
+.black.active {
+  border: 3px solid transparent;
+  outline: 2px solid var(--gray);
+  border-top: none;
+}
+
+.black.active.highlight {
+  border: 3px solid var(--highlight);
+  border-top: none;
+}
+
 .black:nth-child(2),
 .black:nth-child(5) {
   margin-right: 10rem;
@@ -125,7 +147,7 @@ main {
 .key-edge {
   background-color: var(--edge-gray);
   width: 3.5rem;
-  height: 2.5rem;
+  height: 2.7rem;
   transform: perspective(5px) rotateX(1deg);
   margin: 2px;
   border-bottom-left-radius: 3px;
