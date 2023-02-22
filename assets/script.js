@@ -54,13 +54,8 @@ function playComposition(songArray) {
 }
 
 function displayKey() {
-  whiteKeys.forEach((item) => {
-    let p = document.createElement('p');
-    item.append(p);
-  });
-
-  let htmlP = document.querySelectorAll('.piano .white p');
+  let whiteKeyInfo = document.querySelectorAll('.piano .white p');
   keyboardW.forEach((item, index) => {
-    htmlP[index].innerHTML = item;
+    whiteKeyInfo[index].innerHTML = item;
   });
 }
