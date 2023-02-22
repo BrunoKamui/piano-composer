@@ -24,6 +24,17 @@ document.querySelector('.composer button').addEventListener('click', () => {
   }
 });
 
+document.querySelector(`input[data-key="keyboard-keys"]`).addEventListener('click', (element) => {
+  let input = element.target;
+  if (input.checked) {
+    displayKey(keyboardW, keyboardB);
+    console.log('Oi');
+  } else {
+    removeDisplayKey();
+    console.log('Nada');
+  }
+});
+
 function playSound(sound) {
   let audioElement = document.querySelector(`#sound-${sound}`);
   let keyElement = document.querySelector(`div[data-key="${sound}"]`);
@@ -53,14 +64,26 @@ function playComposition(songArray) {
   });
 }
 
-function displayKey() {
+function displayKey(displayWhite, displayBlack) {
   let whiteKeyInfo = document.querySelectorAll('.piano .white p');
-  keyboardW.forEach((item, index) => {
+  displayWhite.forEach((item, index) => {
     whiteKeyInfo[index].innerHTML = item;
   });
 
   let blackKeyInfo = document.querySelectorAll('.piano .black p');
-  keyboardB.forEach((item, index) => {
+  displayBlack.forEach((item, index) => {
     blackKeyInfo[index].innerHTML = item;
+  });
+}
+
+function removeDisplayKey() {
+  let whiteKeyInfo = document.querySelectorAll('.piano .white p');
+  whiteKeyInfo.forEach((item) => {
+    item.innerHTML = '';
+  });
+
+  let blackKeyInfo = document.querySelectorAll('.piano .black p');
+  blackKeyInfo.forEach((item) => {
+    item.innerHTML = '';
   });
 }
