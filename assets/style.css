@@ -221,6 +221,7 @@ main {
 .composer form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -236,29 +237,30 @@ main {
   font-size: 1.6rem;
 }
 
-.composer .interval {
+.composer .tempo {
   display: flex;
   justify-content: space-between;
   width: 30rem;
 }
 
-.composer .interval label {
+.composer .tempo label {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.composer .interval label input {
+.composer .tempo label input {
   appearance: none;
   -webkit-appearance: none;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   border: 2px solid var(--silver);
+  margin-bottom: 0.5rem;
   cursor: pointer;
 }
 
-.composer .interval label input:checked {
+.composer .tempo label input:checked {
   background-color: var(--blue);
 }
 
