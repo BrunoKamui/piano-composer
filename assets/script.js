@@ -30,7 +30,7 @@ document.querySelector(`input[data-key="keyboard-keys"]`).addEventListener('clic
     displayKey(keyboardW, keyboardB);
     console.log('Oi');
   } else {
-    removeDisplayKey();
+    hideKey();
     console.log('Nada');
   }
 });
@@ -76,7 +76,7 @@ function displayKey(displayWhite, displayBlack) {
   });
 }
 
-function removeDisplayKey() {
+function hideKey() {
   let whiteKeyInfo = document.querySelectorAll('.piano .white p');
   whiteKeyInfo.forEach((item) => {
     item.innerHTML = '';
