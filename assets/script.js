@@ -58,4 +58,9 @@ function displayKey() {
   keyboardW.forEach((item, index) => {
     whiteKeyInfo[index].innerHTML = item;
   });
+
+  let blackKeyInfo = document.querySelectorAll('.piano .black p');
+  keyboardB.forEach((item, index) => {
+    blackKeyInfo[index].innerHTML = item;
+  });
 }
