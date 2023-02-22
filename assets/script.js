@@ -1,3 +1,15 @@
+let keyboardWhite = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'];
+let keyboardBlack = [2, 3, 5, 6, 7, 9, 0];
+
+let pianoKeyWhite = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C', 'D', 'E'];
+let pianoKeyBlack = ['C#', 'D#', 'F#', 'G#', 'A#', 'C#', 'D#'];
+
+let musicalNoteWhite = ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si', 'Do', 'Re', 'Mi'];
+let musicalNoteBlack = ['Do#', 'Re#', 'Fa#', 'Sol#', 'La#', 'Do#', 'Re#'];
+
+let whiteKeys = document.querySelector('.piano .white-keys').children;
+let blackKeys = document.querySelector('.piano .black-keys').children;
+
 document.body.addEventListener('keyup', (event) => {
   playSound(event.code.toLocaleLowerCase());
 });
