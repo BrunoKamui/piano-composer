@@ -1,14 +1,14 @@
-let keyboardWhite = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'];
-let keyboardBlack = [2, 3, 5, 6, 7, 9, 0];
+let keyboardW = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'];
+let keyboardB = [2, 3, 5, 6, 7, 9, 0];
 
-let pianoKeyWhite = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C', 'D', 'E'];
-let pianoKeyBlack = ['C#', 'D#', 'F#', 'G#', 'A#', 'C#', 'D#'];
+let pianoKeyW = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C', 'D', 'E'];
+let pianoKeyB = ['C#', 'D#', 'F#', 'G#', 'A#', 'C#', 'D#'];
 
-let musicalNoteWhite = ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si', 'Do', 'Re', 'Mi'];
-let musicalNoteBlack = ['Do#', 'Re#', 'Fa#', 'Sol#', 'La#', 'Do#', 'Re#'];
+let musicalW = ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si', 'Do', 'Re', 'Mi'];
+let musicalB = ['Do#', 'Re#', 'Fa#', 'Sol#', 'La#', 'Do#', 'Re#'];
 
-let whiteKeys = document.querySelector('.piano .white-keys').children;
-let blackKeys = document.querySelector('.piano .black-keys').children;
+let whiteKeys = document.querySelectorAll('.piano .white');
+let blackKeys = document.querySelectorAll('.piano .black');
 
 document.body.addEventListener('keyup', (event) => {
   playSound(event.code.toLocaleLowerCase());
@@ -50,5 +50,17 @@ function playComposition(songArray) {
     }, wait);
 
     wait += 250;
+  });
+}
+
+function displayKey() {
+  whiteKeys.forEach((item) => {
+    let p = document.createElement('p');
+    item.append(p);
+  });
+
+  let htmlP = document.querySelectorAll('.piano .white p');
+  keyboardW.forEach((item, index) => {
+    htmlP[index].innerHTML = item;
   });
 }
