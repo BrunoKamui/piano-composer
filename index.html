@@ -121,7 +121,33 @@
 
         <div class="composer">
           <h3>Song Composer</h3>
-          <input id="song" type="text" />
+          <form>
+            <input id="song" type="text" />
+
+            <div class="interval">
+              <label>
+                <input type="radio" name="interval" value="0.5" />
+                <p>0.5x</p>
+              </label>
+              <label>
+                <input type="radio" name="interval" value="1.0" checked />
+                <p>1 x</p>
+              </label>
+              <label>
+                <input type="radio" name="interval" value="1.5" />
+                <p>1.5x</p>
+              </label>
+              <label>
+                <input type="radio" name="interval" value="2.0" />
+                <p>2 x</p>
+              </label>
+              <label>
+                <input type="radio" name="interval" value="2.5" />
+                <p>2.5x</p>
+              </label>
+            </div>
+          </form>
+
           <button class="play-button">Play</button>
         </div>
 
@@ -149,7 +175,7 @@
         </div>
       </section>
     </main>
-    <footer>by Bruno Kamui</footer>
+    <footer><div class="footer-area">by Bruno Kamui</div></footer>
 
     <audio id="sound-keyq" src="./assets/sounds/keyq.wav"></audio>
     <audio id="sound-keyw" src="./assets/sounds/keyw.wav"></audio>
