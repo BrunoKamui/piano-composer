@@ -105,18 +105,25 @@
             <input type="checkbox" data-key="highlight" />
             <p>Highlight keys</p>
           </label>
-          <label>
-            <input type="checkbox" data-key="piano-keys" />
-            <p>Display piano keys</p>
-          </label>
-          <label>
-            <input type="checkbox" data-key="keyboard-keys" checked />
-            <p>Display keyboard keys</p>
-          </label>
-          <label>
-            <input type="checkbox" data-key="musical-notes" />
-            <p>Display musical notes</p>
-          </label>
+
+          <form>
+            <label>
+              <input type="radio" name="display" data-key="piano-keys" />
+              <p>Display piano keys</p>
+            </label>
+            <label>
+              <input type="radio" name="display" data-key="keyboard-keys" checked />
+              <p>Display keyboard keys</p>
+            </label>
+            <label>
+              <input type="radio" name="display" data-key="musical-notes" />
+              <p>Display musical notes</p>
+            </label>
+            <label>
+              <input type="radio" name="display" data-key="hide-notes" />
+              <p>Hide keys</p>
+            </label>
+          </form>
         </div>
 
         <div class="composer">
