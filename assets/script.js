@@ -10,16 +10,26 @@ let musicalB = ['Do#', 'Re#', 'Fa#', 'Sol#', 'La#', 'Do#', 'Re#'];
 let whiteKeys = document.querySelectorAll('.piano .white');
 let blackKeys = document.querySelectorAll('.piano .black');
 
+let tempo = '1';
+
 document.body.addEventListener('keyup', (event) => {
   playSound(event.code.toLocaleLowerCase());
+});
+
+document.querySelector('.tempo').addEventListener('click', (element) => {
+  let tempoSelected = element.target;
+  if (tempoSelected.checked) {
+    tempo = tempoSelected.value;
+    console.log(tempo);
+  }
 });
 
 document.querySelector('.composer button').addEventListener('click', () => {
   let song = document.querySelector('#song').value;
   if (song !== '') {
     let songArray = song.split('');
-    playComposition(songArray);
-    console.log(songArray);
+    playComposition(songArray, tempo);
+    console.log(tempo);
   }
 });
 
@@ -60,14 +70,14 @@ function playSound(sound) {
   }
 }
 
-function playComposition(songArray) {
+function playComposition(songArray, tempo) {
   let wait = 0;
   songArray.forEach((item) => {
     setTimeout(() => {
       item == parseInt(item) ? playSound(`digit${item}`) : playSound(`key${item}`);
     }, wait);
 
-    wait += 250;
+    wait += 250 / tempo;
   });
 }
 
