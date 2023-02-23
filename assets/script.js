@@ -16,7 +16,6 @@ document.body.addEventListener('keyup', (event) => {
 
 document.querySelector('.composer button').addEventListener('click', () => {
   let song = document.querySelector('#song').value;
-
   if (song !== '') {
     let songArray = song.split('');
     playComposition(songArray);
@@ -24,14 +23,23 @@ document.querySelector('.composer button').addEventListener('click', () => {
   }
 });
 
-document.querySelector(`input[data-key="keyboard-keys"]`).addEventListener('click', (element) => {
+document.querySelector(`.options-radio`).addEventListener('click', (element) => {
   let input = element.target;
   if (input.checked) {
-    displayKey(keyboardW, keyboardB);
-    console.log('Oi');
-  } else {
-    hideKey();
-    console.log('Nada');
+    switch (input.value) {
+      case '0':
+        displayKey(pianoKeyW, pianoKeyB);
+        break;
+      case '2':
+        displayKey(musicalW, musicalB);
+        break;
+      case '3':
+        hideKey();
+        break;
+      default:
+        displayKey(keyboardW, keyboardB);
+        break;
+    }
   }
 });
 
@@ -54,7 +62,6 @@ function playSound(sound) {
 
 function playComposition(songArray) {
   let wait = 0;
-
   songArray.forEach((item) => {
     setTimeout(() => {
       item == parseInt(item) ? playSound(`digit${item}`) : playSound(`key${item}`);
@@ -87,3 +94,5 @@ function hideKey() {
     item.innerHTML = '';
   });
 }
+
+displayKey(keyboardW, keyboardB);
