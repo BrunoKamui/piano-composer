@@ -291,6 +291,11 @@ button {
   cursor: pointer;
 }
 
+button.lock {
+  background-color: var(--gray);
+  cursor: default;
+}
+
 .samples {
   display: flex;
   flex-direction: column;

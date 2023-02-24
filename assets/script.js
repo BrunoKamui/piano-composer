@@ -46,7 +46,8 @@ document.querySelector('.tempo').addEventListener('click', (element) => {
   }
 });
 
-document.querySelector('.composer button').addEventListener('click', () => {
+let composerBtn = document.querySelector('.composer button');
+composerBtn.addEventListener('click', () => {
   let song = document.querySelector('#song').value;
   if (song !== '') {
     let songArray = song.split('');
@@ -103,9 +104,11 @@ function playComposition(songArray, tempo) {
     wait += 250 / tempo;
   });
   playing = true;
+  buttonLock();
 
   setTimeout(() => {
     playing = false;
+    buttonUnlock();
   }, wait);
 }
 
@@ -131,6 +134,20 @@ function hideKey() {
   blackKeyInfo.forEach((item) => {
     item.innerHTML = '';
   });
+}
+
+function buttonLock() {
+  playSamples.forEach((item) => {
+    item.classList.add('lock');
+  });
+  composerBtn.classList.add('lock');
+}
+
+function buttonUnlock() {
+  playSamples.forEach((item) => {
+    item.classList.remove('lock');
+  });
+  composerBtn.classList.remove('lock');
 }
 
 displayKey(keyboardW, keyboardB);
