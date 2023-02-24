@@ -114,11 +114,11 @@ function playComposition(songArray, tempo) {
     wait += 250 / tempo;
   });
   playing = true;
-  buttonLock();
+  toggleLockButton();
 
   setTimeout(() => {
     playing = false;
-    buttonUnlock();
+    toggleLockButton();
   }, wait);
 }
 
@@ -146,18 +146,11 @@ function hideKey() {
   });
 }
 
-function buttonLock() {
+function toggleLockButton() {
   playSamples.forEach((item) => {
-    item.classList.add('lock');
+    item.classList.toggle('lock');
   });
-  composerBtn.classList.add('lock');
-}
-
-function buttonUnlock() {
-  playSamples.forEach((item) => {
-    item.classList.remove('lock');
-  });
-  composerBtn.classList.remove('lock');
+  composerBtn.classList.toggle('lock');
 }
 
 displayKey(keyboardW, keyboardB);
