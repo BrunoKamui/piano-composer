@@ -57,6 +57,16 @@ composerBtn.addEventListener('click', () => {
   }
 });
 
+let checkbox = document.querySelector('#highlight');
+checkbox.addEventListener('change', () => {
+  whiteKeys.forEach((item) => {
+    item.classList.toggle('highlight');
+  });
+  blackKeys.forEach((item) => {
+    item.classList.toggle('highlight');
+  });
+});
+
 document.querySelector(`.options-radio`).addEventListener('click', (element) => {
   let input = element.target;
   if (input.checked) {
