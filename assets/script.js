@@ -11,6 +11,7 @@ let whiteKeys = document.querySelectorAll('.piano .white');
 let blackKeys = document.querySelectorAll('.piano .black');
 
 let tempo = '1';
+let playing = false;
 
 const songs = {
   chariots: 'qrtyt--e----qrtyt------qrtyt--e---erewq---iuytu-ty-rt--iuytu-----i--iuytu-ty-rt-erewq',
@@ -30,9 +31,11 @@ playSamples.forEach((item) => {
   let data = item.getAttribute('data-key');
   let playSpeed = item.getAttribute('tempo');
   let sampleArray = songs[data].split('');
+
   item.addEventListener('click', () => {
-    playComposition(sampleArray, playSpeed);
-    console.log(playSpeed);
+    if (playing === false) {
+      playComposition(sampleArray, playSpeed);
+    }
   });
 });
 
@@ -40,7 +43,6 @@ document.querySelector('.tempo').addEventListener('click', (element) => {
   let tempoSelected = element.target;
   if (tempoSelected.checked) {
     tempo = tempoSelected.value;
-    console.log(tempo);
   }
 });
 
@@ -48,8 +50,9 @@ document.querySelector('.composer button').addEventListener('click', () => {
   let song = document.querySelector('#song').value;
   if (song !== '') {
     let songArray = song.split('');
-    playComposition(songArray, tempo);
-    console.log(tempo);
+    if (playing === false) {
+      playComposition(songArray, tempo);
+    }
   }
 });
 
@@ -99,6 +102,11 @@ function playComposition(songArray, tempo) {
 
     wait += 250 / tempo;
   });
+  playing = true;
+
+  setTimeout(() => {
+    playing = false;
+  }, wait);
 }
 
 function displayKey(displayWhite, displayBlack) {
