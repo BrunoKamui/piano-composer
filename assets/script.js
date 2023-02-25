@@ -26,6 +26,20 @@ document.body.addEventListener('keyup', (event) => {
   playSound(event.code.toLocaleLowerCase());
 });
 
+whiteKeys.forEach((item) => {
+  item.addEventListener('click', () => {
+    let playKey = item.getAttribute('data-key');
+    playSound(playKey);
+  });
+});
+
+blackKeys.forEach((item) => {
+  item.addEventListener('click', () => {
+    let playKey = item.getAttribute('data-key');
+    playSound(playKey);
+  });
+});
+
 let playSamples = document.querySelectorAll('.play-sample');
 playSamples.forEach((item) => {
   let data = item.getAttribute('data-key');
