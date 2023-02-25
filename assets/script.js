@@ -17,9 +17,9 @@ const songs = {
   chariots: 'qrtyt--e----qrtyt------qrtyt--e---erewq---iuytu-ty-rt--iuytu-----i--iuytu-ty-rt-erewq',
   naruto: 'uye-------y-i-o---y---------i-----u-i-o-t-p----oio-------o-p-y-i----u---y---e-t-------i-o-i-u---e-u-y',
   simpsons: 't--u-9-po--u-t-w222w---222wr--t--u-9-po--u-t-w222w---222w5--t',
-  hobbits: 'qwe-t-e-w-q----ety-i-u-t-e--rew-qwe-t-ewqwq----et-y-y-t-ewewwewq',
+  countdown: 'uyu---e------iii-u--y------iui---e---w----yyy-t-5-y-t------uyu---e------iii-u--y------iui---e---w----yyy-t-5-y-t-----5ty----tyu-y-t-5-e---i---u----------uiuyu',
   pegasus:
-    'e-t-u-y--5-w-q--e-t-5--w-q--e-t-u-y--5-w-i--------e-t-u-y--5-w-q--e-t-5--w-q--e-t-u-y--5-w-i------e--5-t-y-u-----u--y-y-t-y-t--5-----e-5-t-----5-t-y-----t-y-u--u----u-o-0-----e--5-t-y-u-----u--y-y-t-y-t--5-----e-5-t--5-e-t----u--y--t--5-5-w-e-------e-e55-tt-ww-q----i--uu-yu--y-y-w-5-w-o--i--uu-y-t----e5-t--5e-t--5t-y--t5-y--w-q-w-e--5--t------tyuu----y-u-y-t-5-e-eu-----5tyy----o-i-u-yu----tyu-----tyuu----y-u-y-t-5-e-eu-----5tyy--t5tyy-----i-u-y--e---5t-q---we-w----------e---5t-q---we-w----------u--u--u',
+    'etuy-5wq-et5-wq-etuy-5wi------etuy-5wq-et5-wq-etuy-5wi----e-5tyu------u-yytyt-5-----e5t-----5ty-----tyu-u--uo0---e-5tyu------u-yytyt-5-----e5t-5et--u-y-t-55we-------ee55ttwwq--i-uuyuy-y-w5wo-i-u-yt----e5t-5et-5ty-t5y-wqwe--5--t----tyuu----tyu-y-t-5-e-eu------5tyy----o-i-u-yu----tyu------tyuu----y-u-y-t-5-e-eu------5tyy--t5tyy--------i-u-y-e----5-t-q----w-e-w----------------e----5-t-q----w-e-w--------------u---u---u',
 };
 
 document.body.addEventListener('keyup', (event) => {
