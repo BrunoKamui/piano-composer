@@ -271,6 +271,11 @@ main {
   font-size: 1.6rem;
 }
 
+.composer form #song::placeholder {
+  text-align: center;
+  color: var(--light-gray);
+}
+
 .composer .tempo {
   display: flex;
   justify-content: space-between;
