@@ -29,6 +29,7 @@ body {
 header {
   height: 8.5rem;
   width: 100vw;
+  min-width: 100rem;
   background-color: var(--header-footer);
   border-bottom: 1px solid var(--silver);
 
@@ -48,6 +49,7 @@ header {
 
 main {
   height: calc(100vh - 20rem);
+  min-height: 76rem;
 }
 
 .piano-area {
@@ -327,7 +329,8 @@ button.lock {
 footer {
   height: 8.5rem;
   width: 100vw;
-  padding: 1rem;
+  min-width: 100rem;
+  padding: 1rem 0;
   background-color: var(--header-footer);
   border-top: 1px solid var(--silver);
   color: var(--white);
@@ -337,4 +340,38 @@ footer {
   max-width: 100rem;
   text-align: center;
   margin: auto;
+}
+
+@media (max-width: 1110px) {
+  body {
+    min-width: 100rem;
+    overflow-y: scroll;
+  }
+  header {
+    min-width: 100rem;
+  }
+  .not-playable {
+    display: none;
+  }
+  footer {
+    min-width: 100rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  :root {
+    font-size: 50%;
+  }
+  button {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 825px) {
+  :root {
+    font-size: 40%;
+  }
+  button {
+    font-size: 1.5rem;
+  }
 }
